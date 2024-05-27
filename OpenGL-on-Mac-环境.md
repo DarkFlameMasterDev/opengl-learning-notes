@@ -1,10 +1,21 @@
+---
+title: OpenGL on Mac 环境
+date: 2023-08-08 09:42:52
+tags:
+- OpenGL
+thumbnail: "https://darkflamemasterdev.github.io/img/opengl_headimg.png"
+---
+
 ## 环境介绍
 
-我将环境部署到了 `Mac + Clion` 上
+这次我将环境部署到了 `Mac + Clion` 上
 
-> 编译 glfw
-> 
-> <img width="600" alt="chatgpt-glfw01" src="https://github.com/DarkFlameMasterDev/opengl-learning-notes/assets/36620503/5e1e611b-ebc4-4858-9941-9cbf7f8e13c9">
+> ~~其实并没有解决上次的编译 `glfw` 的问题，但好像不太影响使用  
+> 因为我不会自己写编译脚本(〒︿〒)~~
+>
+> 解决了！！！chatGPT 真好用！！！
+>
+> ![chatgpt-glfw01.png](OpenGL-on-Mac-环境/chatgpt-glfw01.png)
 
 ```shell
 xcode-select --install
@@ -45,7 +56,7 @@ make
 
 >   最后一个`make install` 不一定要执行，这个命令会将编译的文件放进系统目录，我觉得没必要，你可以直接把文件拖出来，就像这样
 >
->   <img width="512" alt="glfw_home" src="https://github.com/DarkFlameMasterDev/opengl-learning-notes/assets/36620503/b7a6ee2b-4180-4bab-8328-f53e9e129629">
+>   ![glfw_home.png](OpenGL-on-Mac-环境/glfw_home.png)
 >
 >   如果你成功编译了，那么后续的步骤中，你就不需要再下载 `glfw` 了，只要下载 `glad` 就行了
 
@@ -65,9 +76,9 @@ make
 
    [glad下载地址](https://glad.dav1d.de/)
 
-   <img width="600" alt="glfw_web" src="https://github.com/DarkFlameMasterDev/opengl-learning-notes/assets/36620503/de8069a5-8c47-4782-9c84-bc73289857c4">
+   ![glfw_web.png](OpenGL-on-Mac-环境/glfw_web.png)
 
-   <img width="599" alt="glad_web" src="https://github.com/DarkFlameMasterDev/opengl-learning-notes/assets/36620503/86959dcd-9f3f-468d-882d-a10ec95e6a64">
+   ![glad_web.png](OpenGL-on-Mac-环境/glad_web.png)
 
 3. `zshrc` 添加环境变量
 
@@ -76,11 +87,10 @@ make
     export GLAD_HOME="/Users/.../opengl/glad"
     ```
 
-    <img width="512" alt="openGL_home" src="https://github.com/DarkFlameMasterDev/opengl-learning-notes/assets/36620503/0b3626ce-63b2-40b3-beaa-591968509b7d">
-
+    ![opengl_home.png](OpenGL-on-Mac-环境/openGL_home.png)
 
 4. 都是默认的，参考上面的 步骤 1，gcc -v 里的 `InstalledDir`
-   ![clion0](https://github.com/DarkFlameMasterDev/opengl-learning-notes/assets/36620503/383ef4e0-028a-4d36-a3b9-126b89080e3a)
+   ![clion0.png](OpenGL-on-Mac-环境/clion0.png)
 
 5. CMakeLists.txt
 
